@@ -38,9 +38,20 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                TextField("Enter a product",
+                TextField("",
                           text: $inputGiven)
+                    .multilineTextAlignment(.trailing)
             }
+            
+            Button(action: {
+                // Check the answer
+            }, label: {
+                // Label
+                Text("Check answer")
+                    .font(.largeTitle)
+            })
+                .buttonStyle(.bordered)
+                .padding()
             
         }
         .font(.system(size: 72))
