@@ -13,6 +13,9 @@ struct ContentView: View {
     let multiplicand = Int.random(in: 1...12)
     let multiplier = Int.random(in: 1...12)
     
+    // Holds the user's input
+    @State var inputGiven = ""
+    
     // MARK: Computed properties
     var body: some View {
         VStack(spacing: 0) {
@@ -35,7 +38,8 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Text("30")
+                TextField("Enter a product",
+                          text: $inputGiven)
             }
             
         }
