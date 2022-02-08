@@ -9,17 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            Text("x")
+        VStack {
+            HStack {
+                Text("×")
+                
+                Spacer()
+                
+                VStack {
+                    Text("5")
+                    Text("6")
+                }
+            }
+
+            Divider()
             
-            Spacer()
-            
-            VStack {
-                Text("5")
-                Text("6")
+            HStack {
+                Image(systemName: "checkmark.circle")
+                
+                Spacer()
+                
+                Text("30")
             }
         }
         .font(.system(size: 72))
+        .padding()
+
     }
 }
 
